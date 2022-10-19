@@ -1,0 +1,52 @@
+Problem : https://www.codechef.com/START61C/problems/SUBARRAYREM
+
+
+Chef has a binary array AA of length NN. In one operation, Chef does the following:
+
+1. Select any LL and RR such that (1 <= L < R <= |A|)(1≤L<R≤∣A∣)
+2. Add A_L ^ A_{L+1} ^ ... ^ A_R to his score (Here, ^ denotes the bitwise XOR operation)
+3. Remove the subarray A_{L ... R} from A 
+
+
+
+Determine the maximum score Chef can get after performing the above operation any number of times.
+
+Input Format:
+
+1. The first line contains a single integer T — the number of test cases. Then the test cases follow.
+2. The first line of each test case contains an integer n — the size of the array A.
+3. The second line of each test case contains n space-separated integers A_1, A_2, ... , A_N denoting the array A.
+
+Output Format
+For each test case, output the maximum score Chef can get.
+
+Constraints
+1 <= T <= 10^5
+1 <= N <= 10^5
+​A_i ∈{0,1}
+The sum of NN over all test cases won't exceed 2 . 10^5
+
+Sample 1:
+Input
+Output
+3
+5
+1 0 0 0 1
+3
+1 1 1
+3
+0 0 0
+2
+1
+0
+Explanation:
+Test Case 1: We can perform the following moves:
+
+A = [1, 0, 0, 0, 1]A=[1,0,0,0,1]. Select L = 1L=1 and R = 3R=3 and remove subarray [1, 0, 0][1,0,0]. AA becomes [0, 1][0,1].
+A = [0, 1]A=[0,1]. Select L = 1L=1 and R = 2R=2 and remove subarray [0, 1][0,1]. AA becomes [][].
+Total score = 1 + 1 = 2=1+1=2
+
+Test Case 2: We can perform the following move:
+
+A = [1, 1, 1]A=[1,1,1]. Select L = 1L=1 and R = 3R=3 and remove subarray [1, 1, 1][1,1,1]. AA becomes [][].
+Total score = 1=1
